@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items:center;
+  min-height: 100vh;
+  background: #f4d1e9;
+  padding: 20px;
+}
+
+/* HEADING */
+.slider-title{
+  font-size: 28px;
+  font-weight: 700;
+  color: #444;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+/* SLIDER WRAPPER */
+.logos {
+  display: flex;
+  overflow: hidden;
+  padding: 40px 0;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  box-shadow: 10px 10px 25px rgba(0,0,0,0.25);
+  width: 100%;
+  max-width: 1400px;
+}
+
+/* MOVING TRACK */
+.logos_slide {
+  display: flex;
+  white-space: nowrap;
+  animation: slide 10s linear infinite;
+}
+
+/* GLASS CARD */
+.glass{
+  width: 150px;
+  height: 100px;
+  margin: 0 40px;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.4);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  transition: transform .3s ease;
+}
+
+/* ICON INSIDE */
+.glass img {
+  width: 70%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* HOVER — STOP SCROLL */
+.logos:hover .logos_slide {
+  animation-play-state: paused;
+}
+
+/* HOVER SCALE EFFECT */
+.glass:hover{
+  transform: scale(1.15);
+}
+
+/* INFINITE LOOP */
+@keyframes slide {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 992px){
+  .glass{
+    width: 130px;
+    height: 90px;
+    margin: 0 30px;
+  }
+  .glass img{
+    width: 65%;
+  }
+}
+
+@media (max-width: 768px){
+  .slider-title{
+    font-size: 22px;
+  }
+  .glass{
+    width: 110px;
+    height: 80px;
+    margin: 0 20px;
+  }
+  .glass img{
+    width: 60%;
+  }
+}
+
+@media (max-width: 480px){
+  .slider-title{
+    font-size: 18px;
+  }
+  .glass{
+    width: 90px;
+    height: 65px;
+    margin: 0 15px;
+  }
+  .glass img{
+    width: 55%;
+  }
+  .logos{
+    padding: 25px 0;
+  }
+}
+
