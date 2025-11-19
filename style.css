@@ -41,7 +41,7 @@ body{
 .logos_slide {
   display: flex;
   white-space: nowrap;
-  animation: slide 10s linear infinite;
+  animation: slide 14s linear infinite;
 }
 
 /* GLASS CARD */
